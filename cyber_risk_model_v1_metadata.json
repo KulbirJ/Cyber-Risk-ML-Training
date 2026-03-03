@@ -1,0 +1,17 @@
+{
+  "model_type": "XGBRegressor",
+  "training_date": "2026-03-03T12:54:07.497283",
+  "test_size": 0.2,
+  "train_samples": 384,
+  "test_samples": 96,
+  "features": [
+    "cvss_score",
+    "epss_score",
+    "days_since_published",
+    "attack_count"
+  ],
+  "metrics": {
+    "MAE": 0.02473644751310347,
+    "R2": 0.9985350422591168
+  }
+}

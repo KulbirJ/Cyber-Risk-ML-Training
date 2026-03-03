@@ -1,0 +1,21 @@
+{
+  "model_type": "XGBRegressor",
+  "version": "v2",
+  "training_date": "2026-03-03T13:04:16.552085",
+  "features": [
+    "cvss_score",
+    "epss_score",
+    "days_since_published",
+    "attack_count",
+    "text_length_of_description",
+    "has_ransomware_keyword",
+    "days_since_published_category",
+    "attack_trend_score"
+  ],
+  "metrics": {
+    "MAE": 0.024340447942415844,
+    "R2": 0.998546868833303,
+    "MAE_vs_v1": 0.0003959995706876267,
+    "MAE_improvement_pct": 1.6008748648238857
+  }
+}

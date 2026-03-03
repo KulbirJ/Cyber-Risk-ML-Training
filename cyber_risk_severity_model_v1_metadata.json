@@ -1,0 +1,30 @@
+{
+  "model_type": "XGBClassifier",
+  "training_date": "2026-03-03T12:54:07.758636",
+  "test_size": 0.2,
+  "train_samples": 400,
+  "test_samples": 100,
+  "num_classes": 4,
+  "classes": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "features": [
+    "cvss_score",
+    "epss_score",
+    "days_since_published",
+    "attack_count"
+  ],
+  "metrics": {
+    "F1_weighted": 1.0,
+    "F1_macro": 1.0
+  },
+  "class_distribution": {
+    "0": 247,
+    "1": 159,
+    "2": 37,
+    "3": 57
+  }
+}
