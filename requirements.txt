@@ -5,3 +5,4 @@ tqdm
 scikit-learn
 xgboost
 joblib
+python-dotenv

@@ -16,18 +16,25 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict
 import requests
 import json
+import os
 from datetime import datetime, timezone, timedelta
+from dotenv import load_dotenv
 import numpy as np
 from xgboost import XGBRegressor
 import uvicorn
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ── Configuration ────────────────────────────────────────────────────────────
 
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 EPSS_API_URL = "https://api.first.org/data/v1/epss"
 
-# NVD API Key (set here or via environment variable)
-NVD_API_KEY = "78ec782a-f743-4872-b091-f43720b7e710"
+# NVD API Key from environment variable (loaded from .env)
+NVD_API_KEY = os.getenv("NVD_API_KEY", "")
+if not NVD_API_KEY:
+    raise ValueError("NVD_API_KEY not found in environment. Please set it in .env file.")
 
 MODEL_PATH = "cyber_risk_model_v1.json"
 

@@ -6,14 +6,24 @@ saves them to cves_day1.json, and prints how many are from 2025-2026.
 
 import requests
 import json
+import os
 from datetime import datetime, timezone, timedelta
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # NVD CVE API v2.0 endpoint
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 
+# API key from environment variable (loaded from .env)
+NVD_API_KEY = os.getenv("NVD_API_KEY", "")
+if not NVD_API_KEY:
+    raise ValueError("NVD_API_KEY not found in environment. Please set it in .env file.")
+
 # API key sent as a request header (recommended by NVD for higher rate limits)
 HEADERS = {
-    "apiKey": "78ec782a-f743-4872-b091-f43720b7e710"
+    "apiKey": NVD_API_KEY
 }
 
 # NVD enforces a max 120-day window for date range filters.
