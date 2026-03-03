@@ -1,0 +1,49 @@
+{
+  "regressor_metrics": {
+    "mae_train": 0.0011405468071131475,
+    "mae_test": 0.005765981478367933,
+    "r2_train": 0.9998193594640417,
+    "r2_test": 0.9806186021208507
+  },
+  "classifier_metrics": {
+    "accuracy_train": 1.0,
+    "accuracy_test": 1.0,
+    "f1_train": 1.0,
+    "f1_test": 1.0
+  },
+  "training_samples": 400,
+  "testing_samples": 100,
+  "feature_columns": [
+    "cvss_score",
+    "epss_score",
+    "days_since_published",
+    "in_cisa_kev",
+    "has_public_poc",
+    "poc_count",
+    "affected_packages_count",
+    "has_fixed_version",
+    "requires_authentication",
+    "requires_user_interaction",
+    "scope_changed",
+    "in_github_advisories",
+    "github_affected_count",
+    "patch_available",
+    "otx_threat_score",
+    "malware_associated",
+    "active_exploits",
+    "metasploit_modules",
+    "has_metasploit_module",
+    "censys_exposed_count",
+    "has_censys_data",
+    "is_critical_cvss",
+    "is_high_cvss",
+    "attack_vector",
+    "primary_ecosystem",
+    "min_exploit_difficulty",
+    "module_rank",
+    "module_type"
+  ],
+  "timestamp": "2026-03-03T16:00:30.289905",
+  "model_version": "v3",
+  "features_count": 28
+}
