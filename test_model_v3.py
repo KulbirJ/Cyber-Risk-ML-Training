@@ -284,7 +284,7 @@ def main():
 ╚════════════════════════════════════════════════════════════╝{RESET}
     """)
     
-    input(f"{BOLD}Press Enter to start tests...{RESET}")
+    print(f"{BOLD}Starting tests...{RESET}\n")
     
     test_results = []
     

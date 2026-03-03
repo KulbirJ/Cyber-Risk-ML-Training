@@ -358,7 +358,7 @@ async def root():
 
 
 if __name__ == "__main__":
-    print("""
+    print(f"""
 ╔════════════════════════════════════════════════════════════╗
 ║   CYBER RISK MODEL v3 - PRODUCTION DEPLOYMENT              ║
 ╠════════════════════════════════════════════════════════════╣
@@ -374,9 +374,9 @@ if __name__ == "__main__":
 ║  • GET  http://localhost:8000/health                       ║
 ║  • GET  http://localhost:8000/docs (Swagger)               ║
 ║                                                            ║
-║  Enriched CVEs in dataset: %d                              ║
+║  Enriched CVEs in dataset: {len(ENRICHED_CVES)}                          ║
 ║                                                            ║
 ╚════════════════════════════════════════════════════════════╝
-    """ % len(ENRICHED_CVES))
+    """)
     
     uvicorn.run(app, host="0.0.0.0", port=8000, reload=False)
