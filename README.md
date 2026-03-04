@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Cyber Risk ML Training** is a production-ready machine learning system that intelligently scores CVE (Common Vulnerabilities and Exposures) risks using multi-tier data enrichment and advanced ML models. The system processes vulnerability data from 8+ public sources, enriches it with 28 contextual features, and provides real-time risk predictions via a REST API.
+**Cyber Risk ML Training** is a production-ready machine learning system that intelligently scores CVE (Common Vulnerabilities and Exposures) risks using multi-tier data enrichment and advanced ML models. The system processes vulnerability data from 8+ public sources, enriches it with 28 contextual features, and provides real-time risk predictions via a REST API. This system can be used as is in stand alone state to query single or multiple CVEs. For best value use this system as a middle/app layer in your risk assessment platform. 
 
 ---
 
